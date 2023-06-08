@@ -1,0 +1,24 @@
+﻿@model List< UserViewModel>
+@{
+    ViewData["Title"] = "UserList";
+}
+
+<h1>UserList</h1>
+
+<table class="table table-striped">
+    <tr>
+        <th>User Id</th>
+        <th>User Name</th>
+        <th>User eMail</th>
+        <th>User Phone</th>
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <th>@item.Id</th>
+            <th>@item.UserName</th>
+            <th>@item.Email</th>
+            <th>@item.Phone</th>
+        </tr>
+    }
+</table>
